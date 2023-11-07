@@ -2,9 +2,9 @@
 
 SHORTCUTS
 
-CTRL + ENTER = Resolve Ticket
-ALT + ENTER = Park Ticket
-CTRL + i = Go to issues
-ALT + N = New Issue
-ALT + C = Create Issue
+• CTRL + ENTER = Resolve Ticket
+• ALT + ENTER = Park Ticket
+• CTRL + i = Go to issues
+• ALT + N = New Issue
+• ALT + C = Create Issue
 
