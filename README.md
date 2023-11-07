@@ -15,3 +15,7 @@
 • Alt + S = Search
 
 • Ctrl + \ = Select Comment Box
+
+**Visual Features**
+
+• Changes Park and Resolved Message text color to adapt to Dark Mode
