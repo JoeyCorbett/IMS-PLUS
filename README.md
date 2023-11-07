@@ -7,4 +7,4 @@ SHORTCUTS
 • CTRL + i = Go to issues
 • ALT + N = New Issue
 • ALT + C = Create Issue
-
+• Alt + S = Search
