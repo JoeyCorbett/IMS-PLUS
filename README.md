@@ -1,6 +1,6 @@
 # IMS-2.0 adds useful features for faster use
 
-SHORTCUTS
+**SHORTCUTS**
 
 • CTRL + ENTER = Resolve Ticket
 
