@@ -82,6 +82,34 @@
         }
     }
 
+    // Fixes the parked banner on dark theme
+    // NEED TO CHECK IF USER IS USING DARK THEME
+    function fixParkedColorScheme(targetNode) {
+        const targetElement = targetNode.querySelector('.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiAlert-root.MuiAlert-outlinedWarning.MuiAlert-outlined.css-bf6pz0');
+        if (targetElement) {
+            targetElement.style.color = '#c9d1d9';
+            targetElement.style.backgroundColor = '#0d1117';
+        }
+    }
+
+    // Create a MutationObserver to observe changes in the DOM
+    const observer = new MutationObserver(mutationsList => {
+        for (const mutation of mutationsList) {
+            if (mutation.addedNodes.length) {
+                // Check added nodes for the target element
+                fixParkedColorScheme(mutation.target);
+            }
+        }
+    });
+
+    // Function to reconnect the observer when a new page is opened
+    function reconnectObserver() {
+        observer.disconnect();
+        observer.observe(document.body, { childList: true, subtree: true });
+    }
+    // Call the function to reconnect the observer when the page loads
+    reconnectObserver();
+
     // Add event listeners for keydown events
     document.addEventListener('keydown', handleAltEnter);
     document.addEventListener('keydown', handleAltN);
