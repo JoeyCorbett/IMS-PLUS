@@ -8,3 +8,4 @@ SHORTCUTS
 • ALT + N = New Issue
 • ALT + C = Create Issue
 • Alt + S = Search
+• Ctrl + \ = Select Comment Box
