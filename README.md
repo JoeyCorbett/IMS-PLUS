@@ -1,4 +1,4 @@
-# IMS-2.0 adds useful features faster use
+# IMS-2.0 adds useful features for faster use
 
 SHORTCUTS
 
