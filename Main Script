@@ -2,7 +2,7 @@
 // @name         Keyboard Shortcuts IMS
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  Press Alt + Enter, Alt + N, Ctrl + Enter, Ctrl + I, or Alt + C to click specific buttons on the webpage
+// @description  Press Alt + Enter, Alt + N, Ctrl + Enter, Ctrl + I, or Alt + C to click specific buttons on the webpage. Press Alt + S to focus on a specific input field.
 // @author       You
 // @match        https://*/*
 // @match        http://*/*
@@ -62,11 +62,22 @@
         }
     }
 
+    // Function to handle keydown event for Alt + S
+    function handleAltS(event) {
+        if (event.altKey && event.key === 's') {
+            const inputField = document.querySelector('.MuiInput-input.MuiInputBase-input.css-1jhxu0');
+            if (inputField) {
+                inputField.focus();
+            }
+        }
+    }
+
     // Add event listeners for keydown events
     document.addEventListener('keydown', handleAltEnter);
     document.addEventListener('keydown', handleAltN);
     document.addEventListener('keydown', handleCtrlEnter);
     document.addEventListener('keydown', handleCtrlI);
     document.addEventListener('keydown', handleAltC);
+    document.addEventListener('keydown', handleAltS);
 
 })();
