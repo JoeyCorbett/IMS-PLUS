@@ -1,0 +1,72 @@
+// ==UserScript==
+// @name         Keyboard Shortcuts IMS
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Press Alt + Enter, Alt + N, Ctrl + Enter, Ctrl + I, or Alt + C to click specific buttons on the webpage
+// @author       You
+// @match        https://*/*
+// @match        http://*/*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // Function to handle keydown event for Alt + Enter
+    function handleAltEnter(event) {
+        if (event.altKey && event.key === 'Enter') {
+            const buttons = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedAmber.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-1rqew9l');
+            buttons.forEach(button => {
+                button.click();
+            });
+        }
+    }
+
+    // Function to handle keydown event for Alt + N
+    function handleAltN(event) {
+        if (event.altKey && event.key === 'n') {
+            const buttons = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedInherit.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButton-colorInherit.MuiButtonBase-root.css-1hufckp');
+            buttons.forEach(button => {
+                button.click();
+            });
+        }
+    }
+
+    // Function to handle keydown event for Ctrl + Enter
+    function handleCtrlEnter(event) {
+        if (event.ctrlKey && event.key === 'Enter') {
+            const buttons = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedWarning.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-juwm2b');
+            buttons.forEach(button => {
+                button.click();
+            });
+        }
+    }
+
+    // Function to handle keydown event for Ctrl + I
+    function handleCtrlI(event) {
+        if (event.ctrlKey && event.key === 'i') {
+            const button = document.querySelector('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.Mui-selected.css-tf76cc');
+            if (button) {
+                button.click();
+            }
+        }
+    }
+
+    // Function to handle keydown event for Alt + C
+    function handleAltC(event) {
+        if (event.altKey && event.key === 'c') {
+            const button = document.querySelector('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-10a8m5l');
+            if (button) {
+                button.click();
+            }
+        }
+    }
+
+    // Add event listeners for keydown events
+    document.addEventListener('keydown', handleAltEnter);
+    document.addEventListener('keydown', handleAltN);
+    document.addEventListener('keydown', handleCtrlEnter);
+    document.addEventListener('keydown', handleCtrlI);
+    document.addEventListener('keydown', handleAltC);
+
+})();
