@@ -55,6 +55,7 @@
             if (button) {
                 button.click();
             }
+    // Function which adds ability to go "back to active issues" with same shortcut
         } if (event.ctrlKey && event.key == 'i') {
             const active_issues_button = document.querySelector('.MuiButton-root.MuiButton-text.MuiButton-textSecondary.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButtonBase-root.css-lkn55r');
             if (active_issues_button) {
