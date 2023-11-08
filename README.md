@@ -6,7 +6,7 @@
 
 • ALT + ENTER = Park Ticket 
 
-• CTRL + I = Go to issues
+• CTRL + I = Go to issues & Back to Active Issues
 
 • ALT + N = New Issue
 
