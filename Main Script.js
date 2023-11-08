@@ -35,8 +35,13 @@
     // Function to handle keydown event for Ctrl + Enter
     function handleCtrlEnter(event) {
         if (event.ctrlKey && event.key === 'Enter') {
-            const buttons = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedWarning.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-juwm2b');
-            buttons.forEach(button => {
+            const ResolveButton = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedWarning.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-juwm2b');
+            ResolveButton.forEach(button => {
+                button.click();
+            });
+        } if (event.ctrlKey && event.key === 'Enter') { // Corrected 'elif' to 'else if'
+            const ReOpenButton = document.querySelectorAll('.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButton-colorInherit.MuiButtonBase-root.css-zxpq4x');
+            ReOpenButton.forEach(button => {
                 button.click();
             });
         }
