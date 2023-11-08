@@ -2,9 +2,9 @@
 
 **SHORTCUTS**
 
-• CTRL + ENTER = Resolve Ticket
+• CTRL + ENTER = Resolve Ticket & Re-Open Ticket
 
-• ALT + ENTER = Park Ticket
+• ALT + ENTER = Park Ticket 
 
 • CTRL + I = Go to issues
 
