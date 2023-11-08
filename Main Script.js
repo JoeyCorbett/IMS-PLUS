@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         Keyboard Shortcuts IMS
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.1.1
 // @description  Press Alt + Enter, Alt + N, Ctrl + Enter, Ctrl + I, Alt + C to click specific buttons, and Alt + S to focus on a specific input field. Press Ctrl + \ to select a specific textarea field on the webpage.
-// @author       You
+// @author       @JoeyCorbett
+// @author       @TylerMong
 // @match        https://*/*
 // @match        http://*/*
 // @grant        none
