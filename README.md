@@ -1,4 +1,4 @@
-# IMS-2.0 adds useful features for faster use. Used with TamperMonkey (https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+# IMS-2.0 adds useful features for faster use. Used with TamperMonkey Chrome Extension.
 
 **SHORTCUTS**
 
