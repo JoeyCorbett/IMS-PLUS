@@ -39,7 +39,8 @@
             ResolveButton.forEach(button => {
                 button.click();
             });
-        } if (event.ctrlKey && event.key === 'Enter') { // Corrected 'elif' to 'else if'
+    // Function which adds ability to re-open tickets with same shortcut
+        } if (event.ctrlKey && event.key === 'Enter') { 
             const ReOpenButton = document.querySelectorAll('.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButton-colorInherit.MuiButtonBase-root.css-zxpq4x');
             ReOpenButton.forEach(button => {
                 button.click();
@@ -53,6 +54,11 @@
             const button = document.querySelector('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.Mui-selected.css-tf76cc');
             if (button) {
                 button.click();
+            }
+        } if (event.ctrlKey && event.key == 'i') {
+            const active_issues_button = document.querySelector('.MuiButton-root.MuiButton-text.MuiButton-textSecondary.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButtonBase-root.css-lkn55r');
+            if (active_issues_button) {
+                active_issues_button.click();
             }
         }
     }
