@@ -100,11 +100,10 @@
         const DescriptionBox = document.querySelector('.MuiOutlinedInput-input.MuiInputBase-input.MuiInputBase-inputMultiline.css-aremad');
         if (event.key === 'Tab' && document.activeElement == DescriptionBox) {
             console.log("Tab pressed");
-            const PersonField = document.querySelectorAll('#react-select-2-input');
-            if (PersonField) {
-                PersonField.focus();
-            }
-            
+            //const PersonField = document.querySelectorAll('#react-select-2-input');
+            //if (PersonField) {
+                //PersonField.focus();
+            //}
         }
     }
 
