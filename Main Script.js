@@ -95,6 +95,19 @@
         }
     }
 
+    function changeTabFocus(event) {
+        // Declare Description field Constant
+        const DescriptionBox = document.querySelector('.MuiOutlinedInput-input.MuiInputBase-input.MuiInputBase-inputMultiline.css-aremad');
+        if (event.key === 'Tab' && document.activeElement == DescriptionBox) {
+            console.log("Tab pressed");
+            const PersonField = document.querySelectorAll('#react-select-2-input');
+            if (PersonField) {
+                PersonField.focus();
+            }
+            
+        }
+    }
+
     // Fixes the parked banner on dark theme
     // NEED TO CHECK IF USER IS USING DARK THEME
     function fixParkedColorScheme(targetNode) {
@@ -122,7 +135,8 @@
     }
     // Call the function to reconnect the observer when the page loads
     reconnectObserver();
-
+    
+    
     // Add event listeners for keydown events
     document.addEventListener('keydown', handleAltEnter);
     document.addEventListener('keydown', handleAltN);
@@ -131,5 +145,6 @@
     document.addEventListener('keydown', handleAltC);
     document.addEventListener('keydown', handleAltS);
     document.addEventListener('keydown', handleCtrlBackslash);
+    document.addEventListener('keydown', changeTabFocus);
 
 })();
