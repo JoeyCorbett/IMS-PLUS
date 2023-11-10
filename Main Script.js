@@ -41,7 +41,7 @@
                 button.click();
             });
     // Function which adds ability to re-open tickets with same shortcut
-        } if (event.ctrlKey && event.key === 'Enter') { 
+        } if (event.ctrlKey && event.key === 'Enter') {
             const ReOpenButton = document.querySelectorAll('.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButton-colorInherit.MuiButtonBase-root.css-zxpq4x');
             ReOpenButton.forEach(button => {
                 button.click();
@@ -95,15 +95,26 @@
         }
     }
 
+    // Function which checks if current box is selected and focuses on specific element according to selected box
+    // When Description box is selected --> Person Field when PersonField is selected --> Tag Field
     function changeTabFocus(event) {
-        // Declare Description field Constant
+
+        // Check if function has already been executed
+        const isFunctionExecuted = localStorage.getItem('isFunctionExecuted')
+
         const DescriptionBox = document.querySelector('.MuiOutlinedInput-input.MuiInputBase-input.MuiInputBase-inputMultiline.css-aremad');
-        if (event.key === 'Tab' && document.activeElement == DescriptionBox) {
-            console.log("Tab pressed");
-            //const PersonField = document.querySelectorAll('#react-select-2-input');
-            //if (PersonField) {
-                //PersonField.focus();
-            //}
+        if (event.key === 'Tab' && document.activeElement === DescriptionBox) {
+            const PersonField = document.querySelector('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-10a8m5l');
+            if (PersonField) {
+                PersonField.focus();
+            }
+        }
+            const PersonField = document.querySelector('#react-select-2-input');
+            if (event.key === 'Tab' && document.activeElement === PersonField) {
+                const TagField = document.querySelector('#react-select-5-input');
+                if (TagField) {
+                    TagField.focus();
+            }
         }
     }
 
@@ -134,8 +145,8 @@
     }
     // Call the function to reconnect the observer when the page loads
     reconnectObserver();
-    
-    
+
+
     // Add event listeners for keydown events
     document.addEventListener('keydown', handleAltEnter);
     document.addEventListener('keydown', handleAltN);
