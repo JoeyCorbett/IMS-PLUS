@@ -57,7 +57,7 @@
                 button.click();
             }
     // Function which adds ability to go "back to active issues" with same shortcut
-        } if (event.ctrlKey && event.key == 'i') {
+        } if (event.ctrlKey && event.key === 'i') {
             const active_issues_button = document.querySelector('.MuiButton-root.MuiButton-text.MuiButton-textSecondary.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButtonBase-root.css-lkn55r');
             if (active_issues_button) {
                 active_issues_button.click();
@@ -99,24 +99,37 @@
     // When Description box is selected --> Person Field when PersonField is selected --> Tag Field
     function changeTabFocus(event) {
 
+        // Check if current url is satisfied
+        const isDesiredSite = window.location.href = 'https://ims.stockton.edu/v6/issues/create';
         // Check if function has already been executed
         const isFunctionExecuted = localStorage.getItem('isFunctionExecuted')
 
-        const DescriptionBox = document.querySelector('.MuiOutlinedInput-input.MuiInputBase-input.MuiInputBase-inputMultiline.css-aremad');
-        if (event.key === 'Tab' && document.activeElement === DescriptionBox) {
-            const PersonField = document.querySelector('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-10a8m5l');
-            if (PersonField) {
-                PersonField.focus();
+        // Only runs if isFunctionExecuted is False
+        if (!isFunctionExecuted && isDesiredSite) {
+            const DescriptionBox = document.querySelector('.MuiOutlinedInput-input.MuiInputBase-input.MuiInputBase-inputMultiline.css-aremad');
+            if (event.key === 'Tab' && document.activeElement === DescriptionBox) {
+                const PersonField = document.querySelector('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-10a8m5l');
+                if (PersonField) {
+                    PersonField.focus();
+                }
             }
-        }
             const PersonField = document.querySelector('#react-select-2-input');
             if (event.key === 'Tab' && document.activeElement === PersonField) {
                 const TagField = document.querySelector('#react-select-5-input');
                 if (TagField) {
                     TagField.focus();
+                }
+                // Set the flag in localStorage to indicate that the function has been executed
+                localStorage.setItem('isFunctionExecuted', true);
             }
         }
     }
+
+    // Clears the flag when the user leaves the page
+    window.addEventListener('beforeunload', () => {
+        localStorage.removeItem('isFunctionExecuted');
+    });
+
 
     // Fixes the parked banner on dark theme
     // NEED TO CHECK IF USER IS USING DARK THEME
