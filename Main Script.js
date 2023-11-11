@@ -57,7 +57,7 @@
                 button.click();
             }
     // Function which adds ability to go "back to active issues" with same shortcut
-        } if (event.ctrlKey && event.key == 'i') {
+        } if (event.ctrlKey && event.key === 'i') {
             const active_issues_button = document.querySelector('.MuiButton-root.MuiButton-text.MuiButton-textSecondary.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButtonBase-root.css-lkn55r');
             if (active_issues_button) {
                 active_issues_button.click();
@@ -97,10 +97,18 @@
 
     // Fixes the parked banner on dark theme
     // NEED TO CHECK IF USER IS USING DARK THEME
-    function fixParkedColorScheme(targetNode) {
+    // Function which checks data-test id and changes parked/resolved tickets color accordingly
+    function fixParked_ResolvedColorSchemes(targetNode) {
         const targetElement = targetNode.querySelector('.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiAlert-root.MuiAlert-outlinedWarning.MuiAlert-outlined.css-bf6pz0');
-        if (targetElement) {
+        const ParkedIcon = document.querySelector('[data-testid="SnoozeIcon"]');
+        if (ParkedIcon && targetElement) {
             targetElement.style.color = '#c9d1d9';
+            targetElement.style.backgroundColor = '#0d1117';
+        }
+        const ResolvedIcon = document.querySelector('[data-testid="ReportProblemOutlinedIcon"]');
+        if (ResolvedIcon && targetElement) {
+            targetElement.style.color = '#c9d1d9';
+            targetElement.style.border = '1px solid rgb(64, 224, 208)';
             targetElement.style.backgroundColor = '#0d1117';
         }
     }
@@ -110,7 +118,7 @@
         for (const mutation of mutationsList) {
             if (mutation.addedNodes.length) {
                 // Check added nodes for the target element
-                fixParkedColorScheme(mutation.target);
+                fixParked_ResolvedColorSchemes(mutation.target);
             }
         }
     });
