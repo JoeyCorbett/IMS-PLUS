@@ -97,6 +97,7 @@
 
     // Fixes the parked banner on dark theme
     // NEED TO CHECK IF USER IS USING DARK THEME
+    // Function which checks data-test id and changes parked/resolved tickets color accordingly
     function fixParked_ResolvedColorSchemes(targetNode) {
         const targetElement = targetNode.querySelector('.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiAlert-root.MuiAlert-outlinedWarning.MuiAlert-outlined.css-bf6pz0');
         const ParkedIcon = document.querySelector('[data-testid="SnoozeIcon"]');
