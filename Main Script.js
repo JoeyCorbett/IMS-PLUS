@@ -7,6 +7,7 @@
 // @author       TylerMong
 // @match        https://ims.stockton.edu/*
 // @require      https://cdn.jsdelivr.net/npm/sweetalert2@10
+// @require      https://kit.fontawesome.com/f54d2a88b1.js
 // @grant        none
 // ==/UserScript==
 
@@ -155,7 +156,6 @@
 
             // Load Font Awesome Icon
            const fontAwesomeScript = document.createElement('script');
-           fontAwesomeScript.src = 'https://kit.fontawesome.com/f54d2a88b1.js';
            fontAwesomeScript.crossOrigin = 'anonymous';
            const FA_Icon =  '<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><style>svg{fill:#ffffff}</style><path d="M224 16c-' +
                '6.7 0-10.8-2.8-15.5-6.1C201.9 5.4 194 0 176 0c-30.5 0-52 43.7-66 89.4C62.7 98.1 32 112.2 32 128c0 14.3 25 27.1 64.6 35.9c-.4 4-.6 8-.6 12.1c0 17 3.3' +
@@ -213,7 +213,8 @@
             `,
             icon: "info",
             background: '#2b2b2b',
-            confirmButtonText: 'Gotcha!',
+            confirmButtonText: 'Gotcha',
+            footer: '<a href="https://github.com/JoeyCorbett/IMS-PLUS" style="color: #ffffff; text-decoration: none; font-weight: bold; transition: border-bottom 0.3s; display: flex; align-items: center;"><i class="fab fa-github fa-beat" style="margin-right: 5px; color: white;"></i>Stay Updated!</a>',
             customClass: {
                 popup: 'dark-popup',
             },
