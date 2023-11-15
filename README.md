@@ -16,6 +16,9 @@
 
 • Ctrl + \ = Select Comment Box
 
+**User Interface
+• Uses UI to show shortcuts to users available anywhere on site
+
 **Visual Features**
 
 • Changes Park and Resolved Message text color to adapt to Dark Mode
