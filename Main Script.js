@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         IMS Keyboard Shortcuts
+// @name         IMS+
 // @namespace    http://tampermonkey.net/
 // @version      0.1.2
-// @description  Provides keyboard shortcuts for common actions
+// @description  Provides functionality to IMS including Shortcuts/Visual Improvements
 // @author       JoeyCorbett
 // @author       TylerMong
 // @match        https://ims.stockton.edu/*
@@ -189,7 +189,7 @@
             html: `
                <div style="text-align: left; color: white; font-family: 'Arial', sans-serif;">
                 <div style="font-size: 20px; margin-bottom: 15px;"><strong>Shortcuts</strong></div>
-                <div style="margin-bottom: 10px; font-size: 16px;">
+                <div style="margin-bottom: 10px; font-size: 18px;">
                     <strong>Ctrl + Enter:</strong> Resolve/Re-Open Ticket
                 </div>
                 <div style="margin-bottom: 10px;">
@@ -241,8 +241,19 @@
         const ResolvedIcon = document.querySelector('[data-testid="ReportProblemOutlinedIcon"]');
         if (ResolvedIcon && targetElement) {
             targetElement.style.color = '#c9d1d9';
-            targetElement.style.border = '1px solid rgb(64, 224, 208)';
+            targetElement.style.border = '1.1px solid #00897b';
             targetElement.style.backgroundColor = '#0d1117';
+        }
+    }
+
+    // Changes Elevated Tickets color to brighter blue for better visibility
+    function fixElevatedColorSchemes(targetNode)
+    {
+        const ElevatedTickets = targetNode.querySelectorAll('.jss4.jss7.jss5')
+        if (ElevatedTickets.length > 0) {
+            ElevatedTickets.forEach(function (element) {
+                element.style.backgroundColor = '#0a2130';
+            })
         }
     }
 
@@ -252,6 +263,7 @@
             if (mutation.addedNodes.length) {
                 // Check added nodes for the target element
                 fixParked_ResolvedColorSchemes(mutation.target);
+                fixElevatedColorSchemes(mutation.target);
             }
         }
     });
@@ -263,4 +275,5 @@
     }
     // Call the function to reconnect the observer when the page loads
     reconnectObserver();
+
 })();
