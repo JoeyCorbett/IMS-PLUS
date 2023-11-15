@@ -16,7 +16,8 @@
 
 • Ctrl + \ = Select Comment Box
 
-**User Interface
+**User Interface**
+
 • Uses UI to show shortcuts to users available anywhere on site
 
 **Visual Features**
