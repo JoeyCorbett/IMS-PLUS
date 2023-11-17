@@ -14,6 +14,8 @@
 
 • Alt + S = Search
 
+• Alt + A = Accounts
+
 • Ctrl + \ = Select Comment Box
 
 **User Interface**
