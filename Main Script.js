@@ -182,15 +182,15 @@
             title: '<span style="font-size: 24px; color: #ffffff; font-weight: bold; padding-right: 26px; "><i class="fa-solid fa-circle-nodes" style="margin-right: 8px;"></i>IMS+</span>',
             html: `
                <div style="text-align: left; color: white; font-family: 'Arial', sans-serif;">
-                <div style="margin-top: 12px;font-size: 20px; margin-bottom: 15px; text-align: center; padding: 10px; background-color: #333; color: #fff; border-radius: 5px; box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);"><strong>Shortcuts</strong></div>
+                <div style="margin-top: 12px;font-size: 20px; margin-bottom: 25px; text-align: center; padding: 10px; background-color: #333; color: #fff; border-radius: 5px; box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);"><strong>Shortcuts</strong></div>
                 <div style="margin-bottom: 10px; font-size: 18px;">
-                    <strong>Ctrl + Enter:</strong> Resolve/Re-Open Ticket
+                    <strong>Ctrl + Enter:</strong> Resolve & Re-Open Ticket
                 </div>
                 <div style="margin-bottom: 10px;">
                     <strong>Alt + Enter:</strong> Park Ticket
                 </div>
                 <div style="margin-bottom: 10px;">
-                    <strong>Ctrl + I:</strong> Go to Issues/Back to Active
+                    <strong>Ctrl + I:</strong> Go to Issues & Back to Active
                 </div>
                 <div style="margin-bottom: 10px;">
                     <strong>Alt + N:</strong> New Issue
@@ -200,6 +200,9 @@
                 </div>
                 <div style="margin-bottom: 10px;">
                     <strong>Alt + S:</strong> Search
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>Alt + A:</strong> Go to Accounts
                 </div>
                 <div>
                     <strong>Ctrl + \\:</strong> Select Comment Box
