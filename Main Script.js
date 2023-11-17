@@ -52,9 +52,16 @@
     {
         if (event.ctrlKey && event.key === 'i')
         {
-            const button = document.querySelector('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.Mui-selected.css-tf76cc');
-            if (button)
-                button.click();
+            const issues_button = document.querySelector('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.Mui-selected.css-tf76cc');
+            // issues button when on other tabs has different class
+            const issues_button_other = document.querySelectorAll('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-tf76cc')
+            const issues_button_index = issues_button_other[2]
+            if (issues_button) {
+                issues_button.click();
+            }
+            if (issues_button_other) {
+                issues_button_index.click();
+            }
             // Function which adds ability to go "back to active issues" with same shortcut
         }
         if (event.ctrlKey && event.key === 'i')
@@ -107,6 +114,18 @@
         }
     }
 
+    function SelectAccounts(event)
+    {
+        if (event.altKey && event.key === 'a')
+        {
+            // Selects second button with class since dashboard button was identical
+            const Accounts_button = document.querySelectorAll('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-tf76cc');
+            const secondButton = Accounts_button[1];
+            if (Accounts_button)
+                secondButton.click();
+        }
+    }
+
     document.addEventListener('keydown', resolveAndReopenTicket);
     document.addEventListener('keydown', parkTicket);
     document.addEventListener('keydown', goToIssuesAndBackToActiveIssues);
@@ -114,6 +133,7 @@
     document.addEventListener('keydown', createIssue);
     document.addEventListener('keydown', search);
     document.addEventListener('keydown', selectCommentBox);
+    document.addEventListener('keydown', SelectAccounts);
 })();
 
 
