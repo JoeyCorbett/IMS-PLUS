@@ -22,6 +22,8 @@
 
 • Uses UI to show shortcuts to users available anywhere on site
 
+![Screenshot 2023-11-16 at 7 41 59 PM](https://github.com/JoeyCorbett/IMS-PLUS/assets/134228957/760789e1-5f9e-496c-951d-6a3b134daf39)
+
 **Visual Features**
 
 • Changes Park and Resolved Message text color to adapt to Dark Mode
