@@ -27,3 +27,4 @@
 **Visual Features**
 
 • Changes Park and Resolved Message text color to adapt to Dark Mode
+• Elevated Tickets now have a ligher blue for better visibility in Dark Mode
