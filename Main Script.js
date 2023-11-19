@@ -274,14 +274,25 @@
     // Changes Elevated Tickets color to brighter blue for better visibility
     function fixElevatedColorSchemes(targetNode)
     {
-        const ElevatedTickets = targetNode.querySelectorAll('.jss4.jss7.jss5')
-        if (ElevatedTickets.length > 0) {
-            ElevatedTickets.forEach(function (element) {
+        // Select all elements with classes containing "jss"
+        const allElements = document.querySelectorAll('[class*="jss"]');
+
+        // Filter elements that have at least three occurrences of "jss" in their class attribute
+        const elementsWithThreeJss = Array.from(allElements).filter(element => {
+            const classList = element.classList;
+            const jssCount = Array.from(classList).filter(className => className.startsWith('jss')).length;
+            return jssCount >= 3;
+        });
+
+        // Check if elements are found
+        if (elementsWithThreeJss.length > 0) {
+            // Iterate over the elements with at least three "jss" occurrences
+            elementsWithThreeJss.forEach(element => {
+                // Do something with each element
                 element.style.backgroundColor = '#0a2130';
-            })
+            });
         }
     }
-
     // Create a MutationObserver to observe changes in the DOM
     const observer = new MutationObserver(mutationsList => {
         for (const mutation of mutationsList) {
