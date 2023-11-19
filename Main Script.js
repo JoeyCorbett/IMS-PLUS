@@ -124,6 +124,13 @@
             const secondButton = Accounts_button[1];
             if (Accounts_button)
                 secondButton.click();
+                // Select stable parent element
+                const parentDiv = document.querySelector('.css-1d8n9bt')
+                // Navigate to input element within parent
+                const accounts_search = parentDiv.querySelector('input')
+                if (accounts_search) {
+                    accounts_search.select();
+                }
         }
     }
 
