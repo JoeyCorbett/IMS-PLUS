@@ -70,6 +70,10 @@
             const active_issues_button = document.querySelector('.MuiButton-root.MuiButton-text.MuiButton-textSecondary.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButtonBase-root.css-lkn55r');
             if (active_issues_button)
                 active_issues_button.click();
+                const search_box = document.querySelector('.MuiInput-input.MuiInputBase-input.css-1jhxu0')
+                if (search_box) {
+                    search_box.blur();
+                }
         }
     }
 
