@@ -21,19 +21,29 @@
     {
         if (event.ctrlKey && event.key === 'Enter')
         {
-            const ResolveButton = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedWarning.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-juwm2b');
-            ResolveButton.forEach(button =>
+            const ResolveButton_dark = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedWarning.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-juwm2b');
+            ResolveButton_dark.forEach(button =>
+            {
+                button.click();
+            });
+            const ResolveButton_light = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedWarning.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-1184ln1');
+            ResolveButton_light.forEach(button =>
             {
                 button.click();
             });
         }
         if (event.ctrlKey && event.key === 'Enter')
         {
-            const ReOpenButton = document.querySelectorAll('.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButton-colorInherit.MuiButtonBase-root.css-zxpq4x');
-            ReOpenButton.forEach(button =>
+            const ReOpenButton_dark = document.querySelectorAll('.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButton-colorInherit.MuiButtonBase-root.css-zxpq4x');
+            ReOpenButton_dark.forEach(button =>
             {
                 button.click();
             });
+            const ReOpenButton_light = document.querySelectorAll('.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButton-colorInherit.MuiButtonBase-root.css-1tunqx9')
+            ReOpenButton_light.forEach(button =>
+            {
+                button.click();
+            })
         }
     }
 
@@ -41,8 +51,13 @@
     {
         if (event.altKey && event.key === 'Enter')
         {
-            const buttons = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedAmber.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-1rqew9l');
-            buttons.forEach(button=>
+            const parkTicket_dark = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedAmber.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-1rqew9l');
+            parkTicket_dark.forEach(button=>
+            {
+                button.click();
+            });
+            const parkTicket_light = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedAmber.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-1l2rnjn')
+            parkTicket_light.forEach(button =>
             {
                 button.click();
             });
@@ -53,15 +68,31 @@
     {
         if (event.ctrlKey && event.key === 'i')
         {
-            const issues_button = document.querySelector('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.Mui-selected.css-tf76cc');
+            const dark_mode = document.querySelector(".css-my7rni")
+            if (dark_mode) {
+                // Dark Mode Selectors
+                const issues_button_dark = document.querySelector('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.Mui-selected.css-tf76cc');
+                // issues button when on other tabs has different class
+                const issues_button_other_dark = document.querySelectorAll('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-tf76cc');
+                const issues_button_index_dark = issues_button_other_dark[2];
+                if (issues_button_dark) {
+                    issues_button_dark.click();
+                }
+                if (issues_button_other_dark) {
+                    issues_button_index_dark.click();
+                }
+            // Light Mode Selectors
+            const issues_button_light = document.querySelector('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.Mui-selected.css-1107aeo');
             // issues button when on other tabs has different class
-            const issues_button_other = document.querySelectorAll('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-tf76cc')
-            const issues_button_index = issues_button_other[2]
-            if (issues_button) {
-                issues_button.click();
+            const issues_button_other_light = document.querySelectorAll('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-1107aeo');
+            const issues_button_index_light = issues_button_other_light[2];
+            const dark_mode = document.querySelector(".css-my7rni")
+
+            if (issues_button_light) {
+                issues_button_light.click();
             }
-            if (issues_button_other) {
-                issues_button_index.click();
+            if (issues_button_other_light) {
+                issues_button_index_light.click();
             }
             // Function which adds ability to go "back to active issues" with same shortcut
         }
@@ -302,8 +333,12 @@
         for (const mutation of mutationsList) {
             if (mutation.addedNodes.length) {
                 // Check added nodes for the target element
-                fixParked_ResolvedColorSchemes(mutation.target);
-                fixElevatedColorSchemes(mutation.target);
+                const dark_mode = document.querySelector(".css-my7rni")
+                if (dark_mode) {
+                    fixParked_ResolvedColorSchemes(mutation.target);
+                    fixElevatedColorSchemes(mutation.target);
+                }
+
             }
         }
     });
@@ -315,5 +350,4 @@
     }
     // Call the function to reconnect the observer when the page loads
     reconnectObserver();
-
 })();
