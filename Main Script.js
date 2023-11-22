@@ -68,7 +68,8 @@
     {
         if (event.ctrlKey && event.key === 'i')
         {
-            const dark_mode = document.querySelector(".css-my7rni")
+            // Dark Mode shortcut
+            const dark_mode = document.querySelector(".css-my7rni");
             if (dark_mode) {
                 // Dark Mode Selectors
                 const issues_button_dark = document.querySelector('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.Mui-selected.css-tf76cc');
@@ -81,30 +82,45 @@
                 if (issues_button_other_dark) {
                     issues_button_index_dark.click();
                 }
-            // Light Mode Selectors
-            const issues_button_light = document.querySelector('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.Mui-selected.css-1107aeo');
-            // issues button when on other tabs has different class
-            const issues_button_other_light = document.querySelectorAll('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-1107aeo');
-            const issues_button_index_light = issues_button_other_light[2];
-            const dark_mode = document.querySelector(".css-my7rni")
-
-            if (issues_button_light) {
-                issues_button_light.click();
+            } else {
+                // Light Mode Selectors
+                const issues_button_light = document.querySelector('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.Mui-selected.css-1107aeo');
+                // issues button when on other tabs has different class
+                const issues_button_other_light = document.querySelectorAll('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-1107aeo');
+                const issues_button_index_light = issues_button_other_light[2];
+                if (issues_button_light) {
+                    issues_button_light.click();
+                }
+                if (issues_button_other_light) {
+                    issues_button_index_light.click();
+                }
             }
-            if (issues_button_other_light) {
-                issues_button_index_light.click();
-            }
-            // Function which adds ability to go "back to active issues" with same shortcut
         }
+        // Function which adds ability to go "back to active issues" with same shortcut
         if (event.ctrlKey && event.key === 'i')
         {
-            const active_issues_button = document.querySelector('.MuiButton-root.MuiButton-text.MuiButton-textSecondary.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButtonBase-root.css-lkn55r');
-            if (active_issues_button)
-                active_issues_button.click();
-                const search_box = document.querySelector('.MuiInput-input.MuiInputBase-input.css-1jhxu0')
+            // Shortcut for Dark Mode
+            const dark_mode = document.querySelector(".css-my7rni");
+            if (dark_mode)
+            {
+                const active_issues_button = document.querySelector('.MuiButton-root.MuiButton-text.MuiButton-textSecondary.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButtonBase-root.css-lkn55r');
+                if (active_issues_button)
+                    active_issues_button.click();
+                const search_box = document.querySelector('.MuiInput-input.MuiInputBase-input.css-1jhxu0');
                 if (search_box) {
                     search_box.blur();
+
+                // Shortcut for Light Mode
+            }} else
+            {
+                const active_issues_button_light = document.querySelector('.MuiButton-root.MuiButton-text.MuiButton-textSecondary.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButtonBase-root.css-cycg99');
+                if (active_issues_button_light)
+                    active_issues_button_light.click();
+                const search_box_light = document.querySelector('.MuiInput-input.MuiInputBase-input.css-mnn31');
+                if (search_box_light) {
+                    search_box_light.blur();
                 }
+            }
         }
     }
 
@@ -112,8 +128,15 @@
     {
         if (event.altKey && event.key === 'n')
         {
-            const buttons = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedInherit.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButton-colorInherit.MuiButtonBase-root.css-1hufckp');
-            buttons.forEach(button =>
+            // Dark Mode
+            const new_issue_dark = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedInherit.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButton-colorInherit.MuiButtonBase-root.css-1hufckp');
+            new_issue_dark.forEach(button =>
+            {
+                button.click();
+            });
+            // Light Mode
+            const new_issue_light = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedInherit.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButton-colorInherit.MuiButtonBase-root.css-ymfdjo');
+            new_issue_light.forEach(button =>
             {
                 button.click();
             });
@@ -124,9 +147,14 @@
     {
         if (event.altKey && event.key === 'c')
         {
-            const button = document.querySelector('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-10a8m5l');
-            if (button)
-                button.click();
+            // Dark Mode
+            const create_issue_dark = document.querySelector('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-10a8m5l');
+            if (create_issue_dark)
+                create_issue_dark.click();
+            // Light Mode
+            const create_issue_light = document.querySelector('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-7ya849');
+            if (create_issue_light)
+                create_issue_light.click();
         }
     }
 
@@ -134,9 +162,14 @@
     {
         if (event.altKey && event.key === 's')
         {
-            const inputField = document.querySelector('.MuiInput-input.MuiInputBase-input.css-1jhxu0');
-            if (inputField)
-                inputField.focus();
+            // Dark Mode
+            const inputField_dark = document.querySelector('.MuiInput-input.MuiInputBase-input.css-1jhxu0');
+            if (inputField_dark)
+                inputField_dark.focus();
+            // Light Mode
+            const inputField_light = document.querySelector('.MuiInput-input.MuiInputBase-input.css-mnn31');
+            if (inputField_light)
+                inputField_light.focus();
         }
     }
 
@@ -144,9 +177,14 @@
     {
         if (event.ctrlKey && event.key === '\\')
         {
-            const textarea = document.querySelector('textarea.MuiOutlinedInput-input.MuiInputBase-input.MuiInputBase-inputMultiline.MuiInputBase-inputAdornedEnd.css-1flw2lc');
-            if (textarea)
-                textarea.select();
+            // Dark Mode
+            const textarea_dark = document.querySelector('textarea.MuiOutlinedInput-input.MuiInputBase-input.MuiInputBase-inputMultiline.MuiInputBase-inputAdornedEnd.css-1flw2lc');
+            if (textarea_dark)
+                textarea_dark.select();
+            // Light Mode
+            const textarea_light = document.querySelector('.MuiOutlinedInput-input.MuiInputBase-input.MuiInputBase-inputMultiline.MuiInputBase-inputAdornedEnd.css-v59wfm');
+            if (textarea_light)
+                textarea_light.select();
         }
     }
 
@@ -154,17 +192,33 @@
     {
         if (event.altKey && event.key === 'a')
         {
-            // Selects second button with class since dashboard button was identical
-            const Accounts_button = document.querySelectorAll('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-tf76cc');
-            const secondButton = Accounts_button[1];
-            if (Accounts_button)
-                secondButton.click();
+            const dark_mode = document.querySelector(".css-my7rni");
+            if (dark_mode) {
+                // (Dark) Selects second button with class since dashboard button was identical
+                const Accounts_button = document.querySelectorAll('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-tf76cc');
+                const secondButton = Accounts_button[1];
+                if (Accounts_button)
+                    secondButton.click();
                 // Select stable parent element
-                const parentDiv = document.querySelector('.css-1d8n9bt')
+                const parentDiv = document.querySelector('.css-1d8n9bt');
                 // Navigate to input element within parent
-                const accounts_search = parentDiv.querySelector('input')
+                const accounts_search = parentDiv.querySelector('input');
                 if (accounts_search) {
                     accounts_search.select();
+                }
+            } else {
+                    // (Light) Selects second button with class since dashboard button was identical
+                    const Accounts_button = document.querySelectorAll('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-1107aeo');
+                    const secondButton = Accounts_button[1];
+                    if (Accounts_button)
+                        secondButton.click();
+                    // Select stable parent element
+                    const parentDiv = document.querySelector('.css-1nnfv7g');
+                    // Navigate to input element within parent
+                    const accounts_search = parentDiv.querySelector('input');
+                    if (accounts_search) {
+                        accounts_search.select();
+                    }
                 }
         }
     }
@@ -333,7 +387,7 @@
         for (const mutation of mutationsList) {
             if (mutation.addedNodes.length) {
                 // Check added nodes for the target element
-                const dark_mode = document.querySelector(".css-my7rni")
+                const dark_mode = document.querySelector(".css-my7rni");
                 if (dark_mode) {
                     fixParked_ResolvedColorSchemes(mutation.target);
                     fixElevatedColorSchemes(mutation.target);
