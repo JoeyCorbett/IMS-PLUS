@@ -21,19 +21,29 @@
     {
         if (event.ctrlKey && event.key === 'Enter')
         {
-            const ResolveButton = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedWarning.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-juwm2b');
-            ResolveButton.forEach(button =>
+            const ResolveButton_dark = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedWarning.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-juwm2b');
+            ResolveButton_dark.forEach(button =>
+            {
+                button.click();
+            });
+            const ResolveButton_light = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedWarning.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-1184ln1');
+            ResolveButton_light.forEach(button =>
             {
                 button.click();
             });
         }
         if (event.ctrlKey && event.key === 'Enter')
         {
-            const ReOpenButton = document.querySelectorAll('.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButton-colorInherit.MuiButtonBase-root.css-zxpq4x');
-            ReOpenButton.forEach(button =>
+            const ReOpenButton_dark = document.querySelectorAll('.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButton-colorInherit.MuiButtonBase-root.css-zxpq4x');
+            ReOpenButton_dark.forEach(button =>
             {
                 button.click();
             });
+            const ReOpenButton_light = document.querySelectorAll('.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButton-colorInherit.MuiButtonBase-root.css-1tunqx9')
+            ReOpenButton_light.forEach(button =>
+            {
+                button.click();
+            })
         }
     }
 
@@ -41,8 +51,13 @@
     {
         if (event.altKey && event.key === 'Enter')
         {
-            const buttons = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedAmber.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-1rqew9l');
-            buttons.forEach(button=>
+            const parkTicket_dark = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedAmber.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-1rqew9l');
+            parkTicket_dark.forEach(button=>
+            {
+                button.click();
+            });
+            const parkTicket_light = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedAmber.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-1l2rnjn')
+            parkTicket_light.forEach(button =>
             {
                 button.click();
             });
@@ -53,27 +68,59 @@
     {
         if (event.ctrlKey && event.key === 'i')
         {
-            const issues_button = document.querySelector('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.Mui-selected.css-tf76cc');
-            // issues button when on other tabs has different class
-            const issues_button_other = document.querySelectorAll('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-tf76cc')
-            const issues_button_index = issues_button_other[2]
-            if (issues_button) {
-                issues_button.click();
+            // Dark Mode shortcut
+            const dark_mode = document.querySelector(".css-my7rni");
+            if (dark_mode) {
+                // Dark Mode Selectors
+                const issues_button_dark = document.querySelector('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.Mui-selected.css-tf76cc');
+                // issues button when on other tabs has different class
+                const issues_button_other_dark = document.querySelectorAll('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-tf76cc');
+                const issues_button_index_dark = issues_button_other_dark[2];
+                if (issues_button_dark) {
+                    issues_button_dark.click();
+                }
+                if (issues_button_other_dark) {
+                    issues_button_index_dark.click();
+                }
+            } else {
+                // Light Mode Selectors
+                const issues_button_light = document.querySelector('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.Mui-selected.css-1107aeo');
+                // issues button when on other tabs has different class
+                const issues_button_other_light = document.querySelectorAll('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-1107aeo');
+                const issues_button_index_light = issues_button_other_light[2];
+                if (issues_button_light) {
+                    issues_button_light.click();
+                }
+                if (issues_button_other_light) {
+                    issues_button_index_light.click();
+                }
             }
-            if (issues_button_other) {
-                issues_button_index.click();
-            }
-            // Function which adds ability to go "back to active issues" with same shortcut
         }
+        // Function which adds ability to go "back to active issues" with same shortcut
         if (event.ctrlKey && event.key === 'i')
         {
-            const active_issues_button = document.querySelector('.MuiButton-root.MuiButton-text.MuiButton-textSecondary.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButtonBase-root.css-lkn55r');
-            if (active_issues_button)
-                active_issues_button.click();
-                const search_box = document.querySelector('.MuiInput-input.MuiInputBase-input.css-1jhxu0')
+            // Shortcut for Dark Mode
+            const dark_mode = document.querySelector(".css-my7rni");
+            if (dark_mode)
+            {
+                const active_issues_button = document.querySelector('.MuiButton-root.MuiButton-text.MuiButton-textSecondary.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButtonBase-root.css-lkn55r');
+                if (active_issues_button)
+                    active_issues_button.click();
+                const search_box = document.querySelector('.MuiInput-input.MuiInputBase-input.css-1jhxu0');
                 if (search_box) {
                     search_box.blur();
+
+                // Shortcut for Light Mode
+            }} else
+            {
+                const active_issues_button_light = document.querySelector('.MuiButton-root.MuiButton-text.MuiButton-textSecondary.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButtonBase-root.css-cycg99');
+                if (active_issues_button_light)
+                    active_issues_button_light.click();
+                const search_box_light = document.querySelector('.MuiInput-input.MuiInputBase-input.css-mnn31');
+                if (search_box_light) {
+                    search_box_light.blur();
                 }
+            }
         }
     }
 
@@ -81,8 +128,15 @@
     {
         if (event.altKey && event.key === 'n')
         {
-            const buttons = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedInherit.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButton-colorInherit.MuiButtonBase-root.css-1hufckp');
-            buttons.forEach(button =>
+            // Dark Mode
+            const new_issue_dark = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedInherit.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButton-colorInherit.MuiButtonBase-root.css-1hufckp');
+            new_issue_dark.forEach(button =>
+            {
+                button.click();
+            });
+            // Light Mode
+            const new_issue_light = document.querySelectorAll('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedInherit.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButton-colorInherit.MuiButtonBase-root.css-ymfdjo');
+            new_issue_light.forEach(button =>
             {
                 button.click();
             });
@@ -93,9 +147,14 @@
     {
         if (event.altKey && event.key === 'c')
         {
-            const button = document.querySelector('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-10a8m5l');
-            if (button)
-                button.click();
+            // Dark Mode
+            const create_issue_dark = document.querySelector('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-10a8m5l');
+            if (create_issue_dark)
+                create_issue_dark.click();
+            // Light Mode
+            const create_issue_light = document.querySelector('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-7ya849');
+            if (create_issue_light)
+                create_issue_light.click();
         }
     }
 
@@ -103,9 +162,14 @@
     {
         if (event.altKey && event.key === 's')
         {
-            const inputField = document.querySelector('.MuiInput-input.MuiInputBase-input.css-1jhxu0');
-            if (inputField)
-                inputField.focus();
+            // Dark Mode
+            const inputField_dark = document.querySelector('.MuiInput-input.MuiInputBase-input.css-1jhxu0');
+            if (inputField_dark)
+                inputField_dark.focus();
+            // Light Mode
+            const inputField_light = document.querySelector('.MuiInput-input.MuiInputBase-input.css-mnn31');
+            if (inputField_light)
+                inputField_light.focus();
         }
     }
 
@@ -113,9 +177,14 @@
     {
         if (event.ctrlKey && event.key === '\\')
         {
-            const textarea = document.querySelector('textarea.MuiOutlinedInput-input.MuiInputBase-input.MuiInputBase-inputMultiline.MuiInputBase-inputAdornedEnd.css-1flw2lc');
-            if (textarea)
-                textarea.select();
+            // Dark Mode
+            const textarea_dark = document.querySelector('textarea.MuiOutlinedInput-input.MuiInputBase-input.MuiInputBase-inputMultiline.MuiInputBase-inputAdornedEnd.css-1flw2lc');
+            if (textarea_dark)
+                textarea_dark.select();
+            // Light Mode
+            const textarea_light = document.querySelector('.MuiOutlinedInput-input.MuiInputBase-input.MuiInputBase-inputMultiline.MuiInputBase-inputAdornedEnd.css-v59wfm');
+            if (textarea_light)
+                textarea_light.select();
         }
     }
 
@@ -123,17 +192,33 @@
     {
         if (event.altKey && event.key === 'a')
         {
-            // Selects second button with class since dashboard button was identical
-            const Accounts_button = document.querySelectorAll('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-tf76cc');
-            const secondButton = Accounts_button[1];
-            if (Accounts_button)
-                secondButton.click();
+            const dark_mode = document.querySelector(".css-my7rni");
+            if (dark_mode) {
+                // (Dark) Selects second button with class since dashboard button was identical
+                const Accounts_button = document.querySelectorAll('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-tf76cc');
+                const secondButton = Accounts_button[1];
+                if (Accounts_button)
+                    secondButton.click();
                 // Select stable parent element
-                const parentDiv = document.querySelector('.css-1d8n9bt')
+                const parentDiv = document.querySelector('.css-1d8n9bt');
                 // Navigate to input element within parent
-                const accounts_search = parentDiv.querySelector('input')
+                const accounts_search = parentDiv.querySelector('input');
                 if (accounts_search) {
                     accounts_search.select();
+                }
+            } else {
+                    // (Light) Selects second button with class since dashboard button was identical
+                    const Accounts_button = document.querySelectorAll('.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-1107aeo');
+                    const secondButton = Accounts_button[1];
+                    if (Accounts_button)
+                        secondButton.click();
+                    // Select stable parent element
+                    const parentDiv = document.querySelector('.css-1nnfv7g');
+                    // Navigate to input element within parent
+                    const accounts_search = parentDiv.querySelector('input');
+                    if (accounts_search) {
+                        accounts_search.select();
+                    }
                 }
         }
     }
@@ -177,7 +262,20 @@
         const targetElement = targetElements[0];
         if (targetElement)
         {
-            const originalElement = document.querySelector("#root > div.css-toeiso > div.css-my7rni > ul > div.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-tf76cc");
+            const dark_mode = document.querySelector(".css-my7rni");
+            let originalElement;
+
+            // Common part of the baseSelector
+            const baseSelectorCommon = "#root > div.css-toeiso > div";
+
+            // Conditionally add the appropriate class based on dark_mode
+            const buttonClass = dark_mode ? "css-tf76cc" : "css-1107aeo";
+
+            // Create the full baseSelector
+            const baseSelector = `${baseSelectorCommon}.${dark_mode ? 'css-my7rni' : 'css-137ttw5'}`;
+
+            originalElement = document.querySelector(`${baseSelector} > ul > div.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.${buttonClass}`);
+
             const clonedElement = originalElement.cloneNode(true);
 
             const textElement = clonedElement.querySelector('.MuiListItemText-primary');
@@ -209,45 +307,96 @@
     // Adds framework styling to alert box
     function ShowAlert()
     {
-        Swal.fire({
-            title: '<span style="font-size: 24px; color: #ffffff; font-weight: bold; padding-right: 26px; "><i class="fa-solid fa-circle-nodes" style="margin-right: 8px;"></i>IMS+</span>',
-            html: `
+        const dark_mode = document.querySelector(".css-my7rni");
+        if (dark_mode) {
+            Swal.fire({
+                title: '<span style="font-size: 24px; color: #ffffff; font-weight: bold; padding-right: 26px; "><i class="fa-solid fa-circle-nodes" style="margin-right: 8px;"></i>IMS+</span>',
+                html: `
                <div style="text-align: left; color: white; font-family: 'Arial', sans-serif;">
                 <div style="margin-top: 12px;font-size: 20px; margin-bottom: 25px; text-align: center; padding: 10px; background-color: #333; color: #fff; border-radius: 5px; box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);"><strong>Shortcuts</strong></div>
                 <div style="margin-bottom: 10px; font-size: 18px;">
-                    <strong>Ctrl + Enter:</strong> Resolve & Re-Open Ticket
+                    <strong>Ctrl + Enter :</strong> Resolve & Re-Open Ticket
                 </div>
                 <div style="margin-bottom: 10px;">
-                    <strong>Alt + Enter:</strong> Park Ticket
+                    <strong>Alt + Enter :</strong> Park Ticket
                 </div>
                 <div style="margin-bottom: 10px;">
-                    <strong>Ctrl + I:</strong> Go to Issues & Back to Active
+                    <strong>Ctrl + I :</strong> Go to Issues & Back to Active
                 </div>
                 <div style="margin-bottom: 10px;">
-                    <strong>Alt + N:</strong> New Issue
+                    <strong>Alt + N :</strong> New Issue
                 </div>
                 <div style="margin-bottom: 10px;">
-                    <strong>Alt + C:</strong> Create Issue
+                    <strong>Alt + C :</strong> Create Issue
                 </div>
                 <div style="margin-bottom: 10px;">
-                    <strong>Alt + S:</strong> Search
+                    <strong>Alt + S :</strong> Search
                 </div>
                 <div style="margin-bottom: 10px;">
-                    <strong>Alt + A:</strong> Go to Accounts
+                    <strong>Alt + A :</strong> Go to Accounts
                 </div>
                 <div>
-                    <strong>Ctrl + \\:</strong> Select Comment Box
+                    <strong>Ctrl + \\ :</strong> Select Comment Box
                 </div>
             `,
-            icon: "info",
-            background: '#2b2b2b',
-            confirmButtonText: 'Gotcha!',
-            footer: '<a href="https://github.com/JoeyCorbett/IMS-PLUS" style="color: #ffffff; text-decoration: none; font-weight: bold; transition: border-bottom 0.3s; display: flex; align-items: center;"><i class="fab fa-github" style="margin-right: 5px; color: white;"></i>Stay Updated</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLSe049WraemkVfrs9c0naKc3w8DmFLVjAzLVH8eSoIz46GCdRg/viewform?usp=sf_link" style="color: #ffffff; text-decoration: none; font-weight: bold; transition: border-bottom 0.3s; display: flex; align-items: center;"><i class="fa-regular fa-comment" style="margin-right: 5px; color: white;"></i>Feedback Form</a>',
-            customClass: {
-                popup: 'dark-popup',
-            },
-        });
-        //alert(shortcut_display);
+                icon: "info",
+                background: '#2b2b2b',
+                confirmButtonText: 'Gotcha!',
+                footer: '<a href="https://github.com/JoeyCorbett/IMS-PLUS" style="color: #ffffff; text-decoration: none; font-weight: bold; transition: border-bottom 0.3s; display: flex; align-items: center;"><i class="fab fa-github" style="margin-right: 5px; color: white;"></i>Stay Updated</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLSe049WraemkVfrs9c0naKc3w8DmFLVjAzLVH8eSoIz46GCdRg/viewform?usp=sf_link" style="color: #ffffff; text-decoration: none; font-weight: bold; transition: border-bottom 0.3s; display: flex; align-items: center;"><i class="fa-regular fa-comment" style="margin-right: 5px; color: white;"></i>Feedback Form</a>',
+                customClass: {
+                    popup: 'word-popup',
+                },
+            });
+        } else {
+            Swal.fire({
+                title: '<span style="font-size: 24px; color: #000000; font-weight: bold; padding-right: 26px; "><i class="fa-solid fa-circle-nodes" style="margin-right: 8px;"></i>IMS+</span>',
+                html: `
+               <div style="text-align: left; color: #000000; font-family: 'Arial', sans-serif;">
+                <div style="margin-top: 12px;font-size: 20px; margin-bottom: 25px; text-align: center; padding: 10px; background-color: #efefef; color: #000000; border-radius: 5px; box-shadow: 0 4px 8px rgb(147,147,147);"><strong>Shortcuts</strong></div>
+                <div style="margin-bottom: 10px; font-size: 18px;">
+                    <strong>Ctrl + Enter :</strong> Resolve & Re-Open Ticket
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>Alt + Enter :</strong> Park Ticket
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>Ctrl + I :</strong> Go to Issues & Back to Active
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>Alt + N :</strong> New Issue
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>Alt + C :</strong> Create Issue
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>Alt + S :</strong> Search
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>Alt + A :</strong> Go to Accounts
+                </div>
+                <div>
+                    <strong>Ctrl + \\ :</strong> Select Comment Box
+                </div>
+            `,
+                icon: "info",
+                background: '#ffffff',
+                confirmButtonText: 'Gotcha!',
+                footer: '<a href="https://github.com/JoeyCorbett/IMS-PLUS" style="color: #000000; text-decoration: none; font-weight: bold; transition: border-bottom 0.3s; display: flex; align-items: center;"><i class="fab fa-github" style="margin-right: 5px; color: #000000;"></i>Stay Updated</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLSe049WraemkVfrs9c0naKc3w8DmFLVjAzLVH8eSoIz46GCdRg/viewform?usp=sf_link" style="color: #000000; text-decoration: none; font-weight: bold; transition: border-bottom 0.3s; display: flex; align-items: center;"><i class="fa-regular fa-comment" style="margin-right: 5px; color: #000000;"></i>Feedback Form</a>',
+                customClass: {
+                    popup: 'dark-popup',
+                },
+            });
+            // Changes footer color to black
+            const style = document.createElement('style');
+            style.textContent = `
+            .dark-popup .swal2-footer {
+            border-top: 1px solid black !important;
+            }
+            `;
+
+            // Append the style element to the document head
+            document.head.appendChild(style);
+        }
     }
     const targetElement = document.body;
     observer.observe(targetElement, { childList: true, subtree: true });
@@ -302,8 +451,12 @@
         for (const mutation of mutationsList) {
             if (mutation.addedNodes.length) {
                 // Check added nodes for the target element
-                fixParked_ResolvedColorSchemes(mutation.target);
-                fixElevatedColorSchemes(mutation.target);
+                const dark_mode = document.querySelector(".css-my7rni");
+                if (dark_mode) {
+                    fixParked_ResolvedColorSchemes(mutation.target);
+                    fixElevatedColorSchemes(mutation.target);
+                }
+
             }
         }
     });
@@ -315,5 +468,4 @@
     }
     // Call the function to reconnect the observer when the page loads
     reconnectObserver();
-
 })();
