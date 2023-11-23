@@ -18,14 +18,20 @@
 
 • Ctrl + \ = Select Comment Box
 
-**User Interface**
-
-• Uses UI to show shortcuts to users available anywhere on site
-
-![Screenshot 2023-11-16 at 7 41 59 PM](https://github.com/JoeyCorbett/IMS-PLUS/assets/134228957/760789e1-5f9e-496c-951d-6a3b134daf39)
-
 **Visual Features**
 
 • Changes Park and Resolved Message text color to adapt to Dark Mode
 
 • Elevated Tickets now have a ligher blue for better visibility in Dark Mode
+
+**User Interface**
+
+• Uses UI to show shortcuts to users available anywhere on site
+
+**Dark Mode**
+
+![Screenshot 2023-11-16 at 7 41 59 PM](https://github.com/JoeyCorbett/IMS-PLUS/assets/134228957/760789e1-5f9e-496c-951d-6a3b134daf39)
+
+**Light Mode**
+
+![Screenshot 2023-11-23 at 2 46 42 PM](https://github.com/JoeyCorbett/IMS-PLUS/assets/134228957/0187604f-f6a9-4e6b-a82c-53228c9c834b)
