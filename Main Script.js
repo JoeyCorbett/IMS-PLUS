@@ -262,7 +262,20 @@
         const targetElement = targetElements[0];
         if (targetElement)
         {
-            const originalElement = document.querySelector("#root > div.css-toeiso > div.css-my7rni > ul > div.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.css-tf76cc");
+            const dark_mode = document.querySelector(".css-my7rni");
+            let originalElement;
+
+            // Common part of the baseSelector
+            const baseSelectorCommon = "#root > div.css-toeiso > div";
+
+            // Conditionally add the appropriate class based on dark_mode
+            const buttonClass = dark_mode ? "css-tf76cc" : "css-1107aeo";
+
+            // Create the full baseSelector
+            const baseSelector = `${baseSelectorCommon}.${dark_mode ? 'css-my7rni' : 'css-137ttw5'}`;
+
+            originalElement = document.querySelector(`${baseSelector} > ul > div.MuiButtonBase-root.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.MuiListItem-button.${buttonClass}`);
+
             const clonedElement = originalElement.cloneNode(true);
 
             const textElement = clonedElement.querySelector('.MuiListItemText-primary');
@@ -332,7 +345,6 @@
                 popup: 'dark-popup',
             },
         });
-        //alert(shortcut_display);
     }
     const targetElement = document.body;
     observer.observe(targetElement, { childList: true, subtree: true });
