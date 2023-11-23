@@ -307,44 +307,96 @@
     // Adds framework styling to alert box
     function ShowAlert()
     {
-        Swal.fire({
-            title: '<span style="font-size: 24px; color: #ffffff; font-weight: bold; padding-right: 26px; "><i class="fa-solid fa-circle-nodes" style="margin-right: 8px;"></i>IMS+</span>',
-            html: `
+        const dark_mode = document.querySelector(".css-my7rni");
+        if (dark_mode) {
+            Swal.fire({
+                title: '<span style="font-size: 24px; color: #ffffff; font-weight: bold; padding-right: 26px; "><i class="fa-solid fa-circle-nodes" style="margin-right: 8px;"></i>IMS+</span>',
+                html: `
                <div style="text-align: left; color: white; font-family: 'Arial', sans-serif;">
                 <div style="margin-top: 12px;font-size: 20px; margin-bottom: 25px; text-align: center; padding: 10px; background-color: #333; color: #fff; border-radius: 5px; box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);"><strong>Shortcuts</strong></div>
                 <div style="margin-bottom: 10px; font-size: 18px;">
-                    <strong>Ctrl + Enter:</strong> Resolve & Re-Open Ticket
+                    <strong>Ctrl + Enter :</strong> Resolve & Re-Open Ticket
                 </div>
                 <div style="margin-bottom: 10px;">
-                    <strong>Alt + Enter:</strong> Park Ticket
+                    <strong>Alt + Enter :</strong> Park Ticket
                 </div>
                 <div style="margin-bottom: 10px;">
-                    <strong>Ctrl + I:</strong> Go to Issues & Back to Active
+                    <strong>Ctrl + I :</strong> Go to Issues & Back to Active
                 </div>
                 <div style="margin-bottom: 10px;">
-                    <strong>Alt + N:</strong> New Issue
+                    <strong>Alt + N :</strong> New Issue
                 </div>
                 <div style="margin-bottom: 10px;">
-                    <strong>Alt + C:</strong> Create Issue
+                    <strong>Alt + C :</strong> Create Issue
                 </div>
                 <div style="margin-bottom: 10px;">
-                    <strong>Alt + S:</strong> Search
+                    <strong>Alt + S :</strong> Search
                 </div>
                 <div style="margin-bottom: 10px;">
-                    <strong>Alt + A:</strong> Go to Accounts
+                    <strong>Alt + A :</strong> Go to Accounts
                 </div>
                 <div>
-                    <strong>Ctrl + \\:</strong> Select Comment Box
+                    <strong>Ctrl + \\ :</strong> Select Comment Box
                 </div>
             `,
-            icon: "info",
-            background: '#2b2b2b',
-            confirmButtonText: 'Gotcha!',
-            footer: '<a href="https://github.com/JoeyCorbett/IMS-PLUS" style="color: #ffffff; text-decoration: none; font-weight: bold; transition: border-bottom 0.3s; display: flex; align-items: center;"><i class="fab fa-github" style="margin-right: 5px; color: white;"></i>Stay Updated</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLSe049WraemkVfrs9c0naKc3w8DmFLVjAzLVH8eSoIz46GCdRg/viewform?usp=sf_link" style="color: #ffffff; text-decoration: none; font-weight: bold; transition: border-bottom 0.3s; display: flex; align-items: center;"><i class="fa-regular fa-comment" style="margin-right: 5px; color: white;"></i>Feedback Form</a>',
-            customClass: {
-                popup: 'dark-popup',
-            },
-        });
+                icon: "info",
+                background: '#2b2b2b',
+                confirmButtonText: 'Gotcha!',
+                footer: '<a href="https://github.com/JoeyCorbett/IMS-PLUS" style="color: #ffffff; text-decoration: none; font-weight: bold; transition: border-bottom 0.3s; display: flex; align-items: center;"><i class="fab fa-github" style="margin-right: 5px; color: white;"></i>Stay Updated</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLSe049WraemkVfrs9c0naKc3w8DmFLVjAzLVH8eSoIz46GCdRg/viewform?usp=sf_link" style="color: #ffffff; text-decoration: none; font-weight: bold; transition: border-bottom 0.3s; display: flex; align-items: center;"><i class="fa-regular fa-comment" style="margin-right: 5px; color: white;"></i>Feedback Form</a>',
+                customClass: {
+                    popup: 'word-popup',
+                },
+            });
+        } else {
+            Swal.fire({
+                title: '<span style="font-size: 24px; color: #000000; font-weight: bold; padding-right: 26px; "><i class="fa-solid fa-circle-nodes" style="margin-right: 8px;"></i>IMS+</span>',
+                html: `
+               <div style="text-align: left; color: #000000; font-family: 'Arial', sans-serif;">
+                <div style="margin-top: 12px;font-size: 20px; margin-bottom: 25px; text-align: center; padding: 10px; background-color: #efefef; color: #000000; border-radius: 5px; box-shadow: 0 4px 8px rgb(147,147,147);"><strong>Shortcuts</strong></div>
+                <div style="margin-bottom: 10px; font-size: 18px;">
+                    <strong>Ctrl + Enter :</strong> Resolve & Re-Open Ticket
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>Alt + Enter :</strong> Park Ticket
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>Ctrl + I :</strong> Go to Issues & Back to Active
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>Alt + N :</strong> New Issue
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>Alt + C :</strong> Create Issue
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>Alt + S :</strong> Search
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>Alt + A :</strong> Go to Accounts
+                </div>
+                <div>
+                    <strong>Ctrl + \\ :</strong> Select Comment Box
+                </div>
+            `,
+                icon: "info",
+                background: '#ffffff',
+                confirmButtonText: 'Gotcha!',
+                footer: '<a href="https://github.com/JoeyCorbett/IMS-PLUS" style="color: #000000; text-decoration: none; font-weight: bold; transition: border-bottom 0.3s; display: flex; align-items: center;"><i class="fab fa-github" style="margin-right: 5px; color: #000000;"></i>Stay Updated</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLSe049WraemkVfrs9c0naKc3w8DmFLVjAzLVH8eSoIz46GCdRg/viewform?usp=sf_link" style="color: #000000; text-decoration: none; font-weight: bold; transition: border-bottom 0.3s; display: flex; align-items: center;"><i class="fa-regular fa-comment" style="margin-right: 5px; color: #000000;"></i>Feedback Form</a>',
+                customClass: {
+                    popup: 'dark-popup',
+                },
+            });
+            // Changes footer color to black
+            const style = document.createElement('style');
+            style.textContent = `
+            .dark-popup .swal2-footer {
+            border-top: 1px solid black !important;
+            }
+            `;
+
+            // Append the style element to the document head
+            document.head.appendChild(style);
+        }
     }
     const targetElement = document.body;
     observer.observe(targetElement, { childList: true, subtree: true });
