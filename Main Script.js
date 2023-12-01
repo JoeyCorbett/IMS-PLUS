@@ -223,6 +223,28 @@
         }
     }
 
+    // Function which checks if current box is selected and focuses on specific element according to selected box
+    // When Description box is selected --> Person Field when PersonField is selected --> Tag Field
+    function changeTabFocus(event) {
+
+        // Only runs if isFunctionExecuted is False
+        const DescriptionBox = document.querySelector('.MuiOutlinedInput-input.MuiInputBase-input.MuiInputBase-inputMultiline.css-aremad');
+        if (event.key === 'Tab' && document.activeElement === DescriptionBox) {
+            const PersonField = document.querySelector('.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeSmall.MuiButton-outlinedSizeSmall.MuiButtonBase-root.css-10a8m5l');
+            if (PersonField) {
+                PersonField.focus();
+            }
+        }
+            const PersonField = document.querySelector('#react-select-2-input');
+            if (event.key === 'Tab' && document.activeElement === PersonField) {
+                const TagField = document.querySelector('#react-select-5-input');
+                if (TagField) {
+                    TagField.focus();
+                }
+            }
+    }
+
+
     document.addEventListener('keydown', resolveAndReopenTicket);
     document.addEventListener('keydown', parkTicket);
     document.addEventListener('keydown', goToIssuesAndBackToActiveIssues);
@@ -231,6 +253,7 @@
     document.addEventListener('keydown', search);
     document.addEventListener('keydown', selectCommentBox);
     document.addEventListener('keydown', SelectAccounts);
+    document.addEventListener('keydown', changeTabFocus);
 })();
 
 
