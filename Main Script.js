@@ -116,11 +116,6 @@
             }
     }
 
-    // Clears the flag when the user leaves the page
-    window.addEventListener('beforeunload', () => {
-        localStorage.removeItem('isFunctionExecuted');
-    });
-
 
     // Fixes the parked banner on dark theme
     // NEED TO CHECK IF USER IS USING DARK THEME
