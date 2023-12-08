@@ -244,6 +244,26 @@
             }
     }
 
+    // Ticket Mode Selector
+    function TicketMode(event) {
+        
+        if (event.ctrlKey && event.key === '0') {
+            console.log("Shortcut activated!")
+            
+            // Check for tickets div
+            const ticket_div = document.querySelector('.jss3');
+            if (ticket_div) {
+                const ticket = ticket_div.querySelector('a');
+
+                // Check for anchor element
+                if (ticket) {
+                    ticket.focus();
+                }
+            }
+        }
+       
+    }
+
 
     document.addEventListener('keydown', resolveAndReopenTicket);
     document.addEventListener('keydown', parkTicket);
@@ -254,6 +274,7 @@
     document.addEventListener('keydown', selectCommentBox);
     document.addEventListener('keydown', SelectAccounts);
     document.addEventListener('keydown', changeTabFocus);
+    document.addEventListener('keydown', TicketMode);
 })();
 
 
