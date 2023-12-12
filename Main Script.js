@@ -8,6 +8,8 @@
 // @match        https://ims.stockton.edu/*
 // @require      https://cdn.jsdelivr.net/npm/sweetalert2@10
 // @require      https://kit.fontawesome.com/f54d2a88b1.js
+// @downloadURL  https://github.com/JoeyCorbett/IMS-PLUS/blob/main/Main%20Script.js
+// @updateURL    https://github.com/JoeyCorbett/IMS-PLUS/blob/main/Main%20Script.js
 // @grant        none
 // ==/UserScript==
 
