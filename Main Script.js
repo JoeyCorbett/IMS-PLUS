@@ -481,7 +481,6 @@
                     fixParked_ResolvedColorSchemes(mutation.target);
                     fixElevatedColorSchemes(mutation.target);
                 }
-
             }
         }
     });
