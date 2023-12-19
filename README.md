@@ -1,4 +1,4 @@
-# IMS+ adds useful features for faster use. Used with TamperMonkey Chrome Extension.
+# IMS+ adds useful features for faster use to IT Ticketing System. Used with TamperMonkey Chrome Extension.
 
 **SHORTCUTS**
 
