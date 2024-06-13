@@ -1,33 +1,38 @@
-# IMS+ adds useful features for faster use to IT Ticketing System. Used with TamperMonkey Chrome Extension.
+# IMS+ UserScript
 
-**SHORTCUTS**
+## Description
+IMS+ is a Tampermonkey UserScript designed to enhance functionality and provide visual improvements for IMS (ITS Ticketing System). It adds shortcuts and tweaks to streamline your workflow on the IMS website.
 
-• CTRL + ENTER = Resolve Ticket & Re-Open Ticket
+## Features
 
-• ALT + ENTER = Park Ticket 
+### Shortcuts
+- **Ctrl + Enter**: Resolve & Reopen Ticket
+- **Alt + Enter**: Park Ticket
+- **Ctrl + I**: Navigate to Issues & Back to Active Issues
+- **Alt + N**: Create a New Issue
+- **Alt + C**: Create Issue
+- **Alt + S**: Search
+- **Alt + A**: Go to Accounts
+- **Ctrl + \\**: Select Comment Box
 
-• CTRL + I = Go to issues & Back to Active Issues
+### Visual Tweaks
+- **Improved Visuals**: Enhances UI elements for better visibility and usability.
+- **Custom Button**: Adds an IMS+ button for easy access to shortcuts and information.
 
-• ALT + N = New Issue
+### GUI Enhancements
+- **Font Awesome Icons**: Uses Font Awesome for icons to improve interface aesthetics.
 
-• ALT + C = Create Issue
+## Installation
+1. Install a UserScript manager like Tampermonkey for your browser.
+2. Click [here to install IMS+](https://github.com/JoeyCorbett/IMS-PLUS/blob/main/Main%20Script.js).
+3. The script will automatically apply when you visit IMS
 
-• Alt + S = Search
+## Usage
+- Once installed, simply use the defined keyboard shortcuts to perform various actions more efficiently on the IMS website.
+- Click the IMS+ button to access a quick overview of shortcuts and additional resources.
 
-• Alt + A = Accounts
 
-• Ctrl + \ = Select Comment Box
-
-**Visual Features**
-
-• Changes Park and Resolved Message text color to adapt to Dark Mode
-
-• Elevated Tickets now have a ligher blue for better visibility in Dark Mode
-
-**User Interface**
-
-• Uses UI to show shortcuts to users available anywhere on site
-
+### GUI
 **Dark Mode**
 
 ![Screenshot 2023-11-16 at 7 41 59 PM](https://github.com/JoeyCorbett/IMS-PLUS/assets/134228957/760789e1-5f9e-496c-951d-6a3b134daf39)
